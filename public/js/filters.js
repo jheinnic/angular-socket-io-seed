@@ -2,9 +2,9 @@
 
 /* Filters */
 
-angular.module('myApp.filters', []).
-  filter('interpolate', function (version) {
+angular.module('irally.filters', ['irally.services']).
+  filter('interpolate', ['version', function (version) {
     return function (text) {
       return String(text).replace(/\%VERSION\%/mg, version);
     }
-  });
+  }]);

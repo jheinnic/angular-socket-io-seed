@@ -2,13 +2,13 @@
 
 // Declare app level module which depends on filters, and services
 
-angular.module('myApp', [
+angular.module('irally', [
   'ngRoute',
 
-  'myApp.controllers',
-  'myApp.filters',
-  'myApp.services',
-  'myApp.directives',
+  'irally.controllers',
+  'irally.filters',
+  'irally.services',
+  'irally.directives',
 
   // 3rd party dependencies
   'btford.socket-io'
