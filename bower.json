@@ -1,14 +1,41 @@
 {
-  "name": "application-name",
-  "version": "0.0.0",
+  "name": "irally",
+  "version": "0.4.0",
+  "description": "IRally Platform, revision 4",
+  "authors": [
+    "s <t@g.c>"
+  ],
+  "main": "app.js",
+  "keywords": [
+    "irally"
+  ],
+  "license": "TBD",
+  "homepage": "http://irally.tv/",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
     "components"
   ],
   "dependencies": {
-    "angular": "~1.2.14",
-    "angular-socket-io": "~0.3.0",
-    "angular-route": "~1.2.14"
+    "angular": "1.2.16",
+    "angular-animate": "1.2.16",
+    "angular-cookies": "1.2.16",
+    "angular-i18n": "1.2.16",
+    "angular-loader": "1.2.16",
+    "angular-resource": "1.2.16",
+    "angular-route": "1.2.16",
+    "angular-http-auth": "1.2.1",
+    "angular-motion": "0.3.2",
+    "angular-socket-io": "0.6.0",
+    "angular-ui-utils": "0.1.1",
+    "angular-strap": "2.0.2",
+    "angular-bootstrap": "0.11.0",
+    "bootstrap": "3.1.1",
+    "requirejs": "2.1.11",
+    "require-cs": "0.4.4",
+    "requirejs-domready": "2.0.1"
+  },
+  "devDependencies": {
   }
 }

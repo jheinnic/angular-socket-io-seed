@@ -1,10 +1,28 @@
 {
-  "name": "application-name",
-  "version": "0.0.0",
+  "name": "irally",
+  "version": "0.4.0",
+  "description": "IRally platform, revision 4",
   "private": true,
+  "scripts": {
+    "start": "node_modules/.bin/nodemon app.js",
+    "test": "echo 'TBD for running tests'",
+    "install": "node_modules/.bin/bower install"
+  },
+  "main": "app.js",
   "dependencies": {
-    "socket.io": "~0.9.16",
-    "express": "~3.2.6",
-    "jade": "~0.31.2"
+    "mongodb": "1.4.4",
+    "socket.io": "0.9.16",
+    "express": "3.4.6",
+    "jade": "0.35.0",
+    "cookie": "0.1.2",
+    "less-middleware": "1.0.3",
+    "coffee-middleware": "0.2.1"
+  },
+  "devDependencies": {
+    "bower": "1.3.3",
+    "browserify": "4.1.2",
+    "grunt": "0.4.5",
+    "nodemon": "1.0.18",
+    "requirejs": "2.1.11"
   }
 }
