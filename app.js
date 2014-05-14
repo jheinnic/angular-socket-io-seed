@@ -7,7 +7,10 @@ var express = require('express'),
   routes = require('./routes'),
   api = require('./routes/api'),
   http = require('http'),
-  path = require('path');
+  path = require('path'),
+  fs = require('fs'),
+  lessMiddleware = require('less-middleware'),
+  coffeeMiddleware = require('coffee-middleware');
 
 var app = module.exports = express();
 var server = require('http').createServer(app);
@@ -21,19 +24,41 @@ var io = require('socket.io').listen(server);
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
-app.use(express.logger('dev'));
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(app.router);
+app.use(express.favicon());
 
-// development only
-if (app.get('env') === 'development') {
-  app.use(express.errorHandler());
+if ('development' == app.get('env')) {
+  app.use(express.logger('dev'));
+} else if ('production' == app.get('env')) {
+  app.use(express.logger('prd'));
+} else {
+  app.use(express.logger(app.get('env')));
 }
 
-// production only
-if (app.get('env') === 'production') {
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+
+app.use(express.static(path.join(__dirname, 'public')));
+if (app.get('env') === 'development') {
+  app.use(coffeeMiddleware({
+    src: path.join(__dirname, 'public'),
+    force: true,
+    debug: true
+  }));
+} else {
+  app.use(coffeeMiddleware({
+    src: path.join(__dirname, 'public'),
+    force: false,
+    debug: false
+  }));
+}
+
+app.use(app.router);
+
+if (app.get('env') === 'development') {
+  // development only
+  app.use(express.errorHandler());
+} else if (app.get('env') === 'production') {
+  // production only
   // TODO
 };
 
@@ -53,7 +78,7 @@ app.get('/api/name', api.name);
 app.get('*', routes.index);
 
 // Socket.io Communication
-io.sockets.on('connection', require('./routes/socket'));
+io.sockets.on('connection', require('./sockets'));
 
 /**
  * Start Server
