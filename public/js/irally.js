@@ -3,20 +3,20 @@
 // Declare app level module which depends on application sub-modules and 3rd-party dependencies
 
 angular.module('irally', [
-  'ngRoute', 'btford.socket-io'
+  'ngRoute', 'ir-navbar', 'btford.socket-io'
 ]).
 config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
   $routeProvider.
-    when('/view1', {
-      templateUrl: 'partials/partial1',
-      controller: 'MyCtrl1'
+    when('/login/educator', {
+      templateUrl: 'partials/loginForm',
+      controller: 'EducatorLoginCtrl'
     }).
-    when('/view2', {
-      templateUrl: 'partials/partial2',
-      controller: 'MyCtrl2'
+    when('/login/player', {
+      templateUrl: 'partials/loginForm',
+      controller: 'PlayerLoginCtrl'
     }).
     otherwise({
-      redirectTo: '/view1'
+      redirectTo: '/'
     });
 
   $locationProvider.html5Mode(true);
@@ -46,16 +46,23 @@ controller('AppCtrl', ['$scope', 'socket', function ($scope, socket) {
     socket.removeListener('send:name', recvName);
   });
 }]).
-controller('MyCtrl1', ['$scope', 'socket', function ($scope, socket) {
-  var recvTime = function (data) {
-    $scope.time = data.time;
+controller('EducatorLoginCtrl', ['$scope', '$location', function ($scope, $location) {
+  $scope.loginModel = {
+    email: null,
+    password: null
   };
-  socket.on('send:time', recvTime);
+  $scope.optionsModel = {
+    headerText: "Sign in to iRally's educator portal site",
+    hasRegistration: false
+  };
+  $scope.doLogin = function() {
+    // If API call to login service returns authentication credentials...
+    $scope.$parent.sessionModel.username = $scope.loginModel.email;
+    $scope.$parent.sessionModel.authToken = 'Blahblahblah';
 
-  $scope.$on('$destroy', function() {
-    socket.removeListener('send:time', recvTime);
-  });
+    //$location.
+   }
 }]).
-controller('MyCtrl2', ['$scope', function ($scope) {
+controller('PlayerLoginCtrl', ['$scope', function ($scope) {
   // write Ctrl here
 }]);
