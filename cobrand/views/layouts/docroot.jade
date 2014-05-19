@@ -1,0 +1,30 @@
+doctype 5
+html(lang="en")
+  head
+    title iRally
+    meta(charset='utf8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    base(href='/')
+    link(rel='stylesheet', href='/css/app.css')
+    link(rel='stylesheet', href='/css/irally.css')
+    link(rel='stylesheet', href='/bower_components/angular/angular-csp.css')
+  body(ng-controller='AppCtrl', ng-init="cobrandModel.displayName = '" + displayName + "'")
+    ir-nav-bar
+    .container
+      block body
+      footer()
+        .row
+          .span12
+            p &copy; Team iRally, 2014
+    script(src='/socket.io/socket.io.js')
+    script(src='bower_components/angular-loader/angular-loader.js')
+    script(src='bower_components/angular/angular.js')
+    script(src='bower_components/angular-route/angular-route.js')
+    script(src='bower_components/angular-socket-io/socket.js')
+    script(type='text/javascript', src='bower_components/angular-strap/dist/angular-strap.js')
+    script(type='text/javascript', src='bower_components/angular-strap/dist/angular-strap.tpl.js')
+    script(type='text/javascript', src='bower_components/angular-strap/dist/modules/dimensions.js')
+    script(type='text/javascript', src='bower_components/angular-strap/dist/modules/navbar.js')
+    script(type='text/javascript', src='bower_components/angular-strap/dist/modules/tab.js')
+    script(type='text/javascript', src='js/navbar.js')
+    script(type='text/javascript', src='js/irally.js')

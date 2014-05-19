@@ -1,0 +1,2753 @@
+@charset  utf-8;
+
+* {
+    font-family: arial;
+    font-size: .98em;
+    line-height: 1.3em;
+}
+
+.hlink { cursor:pointer; }
+body{background:#595959;}
+.wrapper {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    border:3px solid #333;
+    margin-top:20px;
+    background:#fff;
+    position: relative;
+}
+
+.content {
+    width: 980px;
+    height: 600px;
+    top: 0;
+    left: 0;
+    position: relative;
+    
+}
+
+.bg_image { 
+    background-image:url(../images/01_1pt0_logo_01.png); 
+    width:980px;
+    height:600px;
+    cursor:pointer;
+}
+
+.close_vid {
+    cursor:pointer;
+    display:block;
+    width:100px;
+}
+
+.ivideo{
+    width: 960px;
+    height: 540px;
+    position: absolute;
+    z-index: 900;
+    top: 32px;
+    left: 15px;
+}
+.videoControls{position:absolute; width:772px; height:24px; background:#333; z-index:3000; bottom:21px; left:107px;}
+.playPauseContainer{width:20px; height:20px; left:5px; top:2px; position:absolute; cursor:pointer}
+.play_icon{background: url(../images/play.png) no-repeat center center;}
+.pause_icon{background: url(../images/pause.png) no-repeat center center;}
+.seekBar{position:absolute; width:720px; height:18px; background:#232323; border:1px solid #3b3b3b; top:2px; left:25px; }
+.seekBarInner{position:absolute; height:14px; top:2px; left:0px; width:1%; background:#3598eb;}
+.seek{width:6px; position:absolute; right:0px; top:0px; height:100%; background:white;}
+.fullscreen{width:20px; height:20px; position:absolute; right:2px; top:2px; position:absolute;background: url(../images/fullscreen.png) no-repeat center center;}
+.main_bg {
+    background-image: url(../images/07_1pt0_buildyourteam_checkbox_01.png);
+}
+
+.m_bg {
+    background: url(/images/center.png) no-repeat;
+    width: 845px;
+    height: 472px;
+    position: relative;
+    margin: auto;
+    top: 66px;
+    left: -2px;
+}
+.m_bg.highlighted {
+    background-image: url(/images/center_highlighted.png);
+}
+.top_index{z-index:10000;}
+
+.video_bg{
+    background-image: url(../images/movieOverlay.png);
+    width: 980px;
+    height: 600px;
+    position: absolute;
+    z-index:1000;
+    top:0px;
+    left:0px;
+}
+
+.m_bg_fill {
+    background-image: url(../images/center_white.png);
+    width: 891px;
+    height: 512px;
+    position: relative;
+    top: -19px;
+    left: -20px;
+}
+
+.margin_content {
+    position: absolute;
+    margin: 6px;
+    width: 968px;
+    height: 588px;
+    top: 0px;
+    z-index:2000;
+}
+
+.bgcolor {
+    background-color:#b6cce1;
+}
+
+.checkbox_div {
+    top: 418px;
+    left: 368px;
+    position: absolute;
+    width:27px;
+    height:26px;
+    background-image:url(../images/checkbox.png);
+}
+
+label {
+    display: inline;
+}
+
+.regular-checkbox {
+    display: none;
+}
+
+.regular-checkbox + label {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0 -15px 10px -12px rgba(0,0,0,0.05);
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    padding: 9px;
+}
+
+.regular-checkbox + label:active,.regular-checkbox:checked + label:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.regular-checkbox:checked + label {
+    
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0 -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;
+}
+
+
+.regular-checkbox:checked + label:after {
+    content: '\2714';
+    font-size: 30px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #000;
+}
+
+.regcheck:checked + label:after {
+    top: -3px;
+    left: 3px;
+}
+
+.top {
+    top: 316px !important;
+}
+
+
+.joinRally_btn {
+    width: 295px;
+    position: absolute;
+    height: 64px;
+    top: 508px;
+    left: 345px;
+    cursor: pointer;
+    background-image: url(../images/04_1pt0_jointherally_01_joinrally.png);
+}
+.rallyTroop_btn {
+    width: 154px;
+    position: absolute;
+    height: 65px;
+    top: 420px;
+    left: 400px;
+    cursor: pointer;
+    background-image: url(/images/build.png);
+}
+.rallyLogin_btn{
+    width: 270px;
+    position: absolute;
+    height: 52px;
+    top: 116px;
+    left: 356px;
+    background-image: url(/images/button6_03.png);
+}
+.irally_login_hands{
+    background:url(../images/hands_login.png) no-repeat center center;
+    width:271px;
+    height:117px;
+     top: 90px;
+    left: 354px;
+    position:absolute;
+    
+}
+.starnote{
+    background:url(../images/14_1pt0_getreadytorally_01_starnote.png) no-repeat center center;
+    width:190px;
+    height:15px;
+    top: 260px;
+    left: 706px;
+    position:absolute;
+    
+    
+}
+
+.rocket_btn {
+    width: 295px;
+    position: absolute;
+    height: 94px;
+    top: 490px;
+    left: 345px;
+    cursor: pointer;
+    background-image: url(../images/14_1pt0_getreadytorally_01_rocket.png);
+}
+
+.start_btn {
+    width: 295px;
+    position: absolute;
+    height: 60px;
+    top: 508px;
+    left: 347px;
+    cursor: pointer;
+    background-image: url(../images/12_1pt0_facebookapp_01_startline.png);
+}
+
+.tosin_btn {
+    width: 295px;
+    position: absolute;
+    height: 60px;
+    top: 528px;
+    left: 340px;
+    cursor: pointer;
+    background-image: url(../images/08_1pt0_termsandconditions_short_01_botcenter.png);
+}
+
+.done_btn {
+    width: 365px;
+    position: absolute;
+    height: 93px;
+    top: 480px;
+    left: 310px;
+    background-image: url(../images/10_1pt0_email_notification_01_botcenter.png);
+}
+
+.i_got_it_btn {
+    width: 295px;
+    position: absolute;
+    height: 78px;
+    top: 363px;
+    left: 281px;
+    cursor: pointer;
+    background-image: url(../images/i_got_it.png);
+    z-index: 5;
+}
+
+.invite_btn {
+    background-image: url(/images/invite.png);
+    width: 144px;
+    height: 49px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14px;
+}
+
+.leave_btn {
+    background-image: url(/images/check_wrong_min.png);
+    width: 41;
+    height: 43px;
+    cursor: pointer;
+}
+
+.lefttop {
+    background-image: url(/images/base_02.png);
+    top: 0px;
+    left: 0px;
+    width: 285px;
+    height: 173px;
+    position: absolute;
+}
+
+.joinLatter{
+   background-image: url(../images/04_join_later.png);
+    top: 0;
+    left: 0;
+    width: 282px;
+    height: 172px;
+    position: absolute;
+}
+.whats_irally{
+    background-image: url(../images/whts_irally.png) !important;    
+    background-position:-2px 3px;
+    background:no-repeat;
+    cursor:pointer;
+}
+
+.join_irally{
+    background-image: url(../images/join_irally_rb.png) !important;    
+    background-position:-2px 3px;
+    background:no-repeat;
+    cursor:pointer;
+    
+}
+.login_irally{
+    background: url(../images/login_logo.png) no-repeat center -4px !important;
+    height:60px !important;
+}
+
+.righttop {
+    background-image: url(/images/base_04.png);
+    top: 0;
+    right: 3px;
+    width: 280px;
+    height: 173px;
+    position: absolute;
+}
+
+.leftbot {
+    background-image: url(/images/base_10.png);
+    bottom: 5px;
+    left: 0;
+    width: 280px;
+    height: 172px;
+    position: absolute;
+}
+
+.rightbot {
+    background-image: url(/images/base_12.png);
+    bottom: 6px;
+    right: 8px;
+    width: 276px;
+    height: 172px;
+    position: absolute;
+}
+
+.ltop {
+    top: 0;
+    left: 0;
+    width: 276px;
+    height: 164px;
+    position: absolute;
+}
+
+.rtop {
+    top: -2px;
+    right: -1px;
+    width: 276px;
+    height: 167px;
+    position: absolute;
+}
+
+.lbot {
+    bottom: 0;
+    left: 0;
+    width: 277px;
+    height: 174px;
+    position: absolute;
+}
+
+.rbot {
+    bottom: 0;
+    right: 0;
+    width: 275px;
+    height: 169px;
+    position: absolute;
+}
+
+.mtop {
+    background: url(/images/base_03.png) no-repeat;
+    left: 286px;
+    top: 0;
+    width: 411px;
+    height: 72px;
+    position: absolute;
+    z-index: 100;
+}
+
+.mbot {
+    background: url(/images/base_13.png) no-repeat;
+    bottom: 0;
+    left: 285px;
+    position: absolute;
+    width: 413px;
+    height: 73px;
+    z-index: 0;
+    
+}
+.welc {
+    background-image:url(../images/16_1pt0_Tplus10_01_welcome.png);
+    bottom: -5px;
+    }
+.welcomehead{
+    background:url(../images/welcome_sign.png) no-repeat center;
+    position:absolute;
+    width:213px;
+    height:96px;
+    top:70px;
+    left:385px;
+    z-index:1;
+    }
+
+.rside {
+    background: url(/images/base_09.png) no-repeat;
+    top: 174px;
+    right: 0;
+    position: absolute;
+    width: 84px;
+    height: 248px;
+}
+.lside {
+    background: url(/images/base_07.png) no-repeat;
+    top: 175px;
+    left: -1px;
+    position: absolute;
+    width: 82px;
+    height: 248px;
+}
+
+.toplogo {
+    background: url(../images/14_1pt0_getreadytorally_01_topcentertext.png) no-repeat center center;
+    width: 394px;
+    height: 47px;
+    top: 10px;
+    left: 296px;
+    position: absolute;
+}
+
+.toplogo_intro {
+    background: url(/images/button3_11.png) no-repeat -57px;
+    width: 164px;
+    height: 90px;
+    top: 74px;
+    left: 410px;
+    position: absolute;
+    background-size: 355px;
+}
+
+.toprally {
+    background: url(../images/11_1pt0_rallythetroops_01_topcenter.png) no-repeat center center;
+    width: 391px;
+    height: 170px;
+    top: 10px;
+    left: 296px;
+    position: absolute;
+}
+
+.buildyourteam{
+    background: url(../images/07_1pt0_buildyourteam_checkbox_01_topcenter.png) no-repeat center center;
+    width:394px;
+    height:47px;
+    top: 10px;
+    left: 296px;
+    position: absolute;
+}
+
+.joinrally {
+    background-image: url(../images/12_1pt0_facebookapp_01_jointherally.png);
+    width: 372px;
+    height: 57px;
+    top: 10px;
+    left: 307px;
+    position: absolute;
+}
+
+.toplogo_terms {
+    background-image: url(/images/button1_04.png);
+    width: 186px;
+    height: 108px;
+    top: 84px;
+    left: 400px;
+    position: absolute;
+    background-position: 0 106px;
+}
+
+.toplogo_email {
+    background: url(../images/10_1pt0_email_notification_01_topcenter.png) no-repeat center center;
+    width: 310px;
+    height: 130px;
+    top: 70px;
+    left: 340px;
+    position: absolute;
+    background-size: 200px;
+}
+
+.center_email {
+    background-image: url(../images/10_1pt0_email_notification_01_text.png);
+    width: 740px;
+    height: 127px;
+    top: 260px;
+    left: 100px;
+    position: absolute;
+}
+.irallyHands {
+    background:url(../images/irally_hands.png) no-repeat center center;
+    width:254px;
+    height:292px;
+    top: 0px;
+    left: 360px;
+    position:absolute;    
+}
+.toplogo_globe {
+    background: url(/images/globe_confirm.png) no-repeat center center;
+    width: 120px;
+    height: 125px;
+    top: 68px;
+    left: 435px;
+    position: absolute;
+    background-size: 94px;
+}
+.toplogo_jointherally {
+    background: url(/images/12_1pt0_facebookapp_01_jointherally.png) no-repeat center center;
+    width: 170px;
+    height: 57px;
+    top: 168px;
+    left: 408px;
+    position: absolute;
+    background-size: 170px;
+}
+    
+.global_confirm{background:url(../images/globe_confirm.png) no-repeat center center !important;    width:254px; height:292px;top:73px;left:363px;position:absolute;}
+.irally_settings{background:url(../images/irally_settings.png) no-repeat center center !important;width:105px; height:102px;top:75px;left:435px;position:absolute;}
+
+.toplogo_terms_f {
+    background-image: url(/images/button3_04.png);
+    width: 180px;
+    height: 112px;
+    top: 84px;
+    left: 400px;
+    position: absolute;
+    background-position: 180px 1px;
+}
+
+.terms_text {
+    background: url(../images/termsShort.png) no-repeat left center;
+    width: 654px;
+    height: 185px;
+    top: 196px;
+    left: 160px;
+    position: absolute;
+}
+
+.term {
+    background: url(../images/terms.png) no-repeat;
+    width: 199px;
+    height: 21px;
+    top: 400px;
+    left: 390px;
+    position: absolute;
+}
+
+.centerimg {
+    background-image: url(../images/07_1pt0_buildyourteam_checkbox_01_middlecenter.png);
+    width: 457px;
+    height: 245px;
+    top: 80px;
+    left: 250px;
+    position: absolute;
+}
+
+.termcheck {
+    font-weight: bold;
+    top: 384px;
+    left: 124px;
+    position: absolute;
+    font-family: "arial", cursive;
+    font-size: 22px;
+}
+
+.confirmMember{width: 830px; float:left; clear:both; margin-bottom:20px; top:365px !important; width: 830px; left: 80px; text-align:center;}
+
+.login_fields {
+    top: 300px;
+    left: 80px;
+    position: absolute;
+    font-family: "arial", cursive;
+    font-size: 22px;
+    width:800px;
+    text-align: center;
+}
+.login_fields input.login_input {
+    height: 27px;
+    font-size: 18px;
+}
+.join_latter{ top: 228px;left: 95px;position: absolute;font-size: 22px;width:800px;}
+.joinLatter{ cursor:pointer;}  
+.memberJoin_fields{top: 230px!important; left:65px; width:900px !important;}
+.controllerGroup{ width:auto; height:auto;}
+.textserver{
+    font-weight: bold;
+    top: 182px;
+    left: 280px;
+    position: absolute;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 2em;
+    text-align:center;
+    width:450px;
+}
+
+.tLabel{width:206px; height:33px; background:#ccc; display:block; float:left; margin-right:10px; background: url(../images/login_labels.png) no-repeat;}
+.tJoinLabel{width:180px; height:33px; background:#ccc; display:block; float:left; margin-right:10px; background: url(../images/join_irally_label.png) no-repeat;}
+.tMemberLabel{width:216px; height:33px; background:#ccc; display:block; float:left; margin-right:10px; background: url(../images/createTeam.png) no-repeat;}
+
+.tNameLabel{background-position:0px 3px;}
+.tPasswordLabel{background-position:0px -42px;}
+.tTeamLabel{background-position:0px -83px;}
+
+.tJName{background-position:0px 2px;}
+.tJEmail{background-position:0px -45px;}
+.tJCMail{background-position:0px -92px;}
+
+.tMTName{background-position:0px 2px;}
+.tMPasswod{background-position:0px -45px;}
+.tMCPasswod{background-position:0px -92px;}
+.tMName{background-position:0px -133px;}
+.tMSName{background-position:0px -176px;}
+.capsMatter{background-position:40px -210px; float:right !important; margin-right:129px;}
+.float_l{float:left !important;}
+.float_r{float:right !important;}
+.c_both{clear:both !important;}
+.tName,.box1,.box2,.box3,.box4{ width:398px !important; padding:1px 0px 1px 0px !important; margin-bottom:0 !important; font-size:1.2em !important; font-weight:bold;  font-family:"Comic Sans MS", cursive; padding-left:10px !important;}    
+.controllerGroup .input{ margin-bottom:15px; width:880px; }
+
+.terms{
+    background: url(../images/07_1pt0_buildyourteam_checkbox_01_T&C.png) no-repeat center top;
+    top: 415px;
+    left: 365px;
+    position: absolute;
+    width: 255px;
+    height: 27px;
+    cursor: pointer;
+    border-bottom:2px solid #F90;
+    padding-bottom:2px;
+}
+
+.p1 {top: 320px;
+left: 320px;}
+.p2 {top: 318px;
+left: 270px;}
+.p3{top: 420px;
+left: 410px;}
+.p4 { top:250px; width:70px;}
+.textarea {
+    width: 70%;
+    height: 266px;
+    position: absolute;
+    top: 170px;
+    left: 155px;
+    text-align: left;
+    overflow-y: scroll;
+    border: 0px solid #ccc;
+    z-index: 10000;
+    padding: 5px;
+    font-size:1.5em;
+    font-weight:bold;
+}
+.textarea.big {
+    height: 295px;
+    top: 180px;
+}
+.trminfo { left: 145px;}
+.rhinotext {
+    height:295px;
+    top: 170px;
+}
+.penaltytext{ 
+    top: 170px;
+    height: 295px;
+    left: 155px;
+}
+.ticktext { 
+top: 170px;
+}
+.showmoney {
+    position:absolute;
+    width:590px;
+    height:250px;
+    top:250px;
+    left:195px;
+    z-index: 10000;
+    }
+.faqtext { top: 170px; left: 155px; height: 295px;}
+.fork {
+    background-image: url(../images/10_1pt0_email_notification_01_fork.png);
+    top: 170px;
+    left: 520px;
+    position: absolute;
+    width: 282px;
+    height: 349px;
+    z-index: 0;
+}
+
+.playerdiv {
+    background-image: url(../images/11_1pt0_rallythetroops_01_playersEmail.png);
+    top: 225px;
+    left: 85px;
+    position: absolute;
+    width: 186px;
+    height: 166px;
+}
+
+.box1 {
+    top: 228px;
+    left: 285px;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+
+.box2 {
+    top: 240px;
+    left: 285px;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+
+.box3 {
+    top: 251px;
+    left: 285px;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+
+.box4 {
+    top: 261px;
+    left: 285px;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+.warning {
+    position:relative;
+    left:300px;
+    font-size:20px;
+}
+.note {
+    background-image: url(../images/11_1pt0_rallythetroops_01_centertext.png);
+    top: 420px;
+    left: 140px;
+    position: absolute;
+    width: 697px;
+    height: 45px;
+}
+
+.handhold {
+    background: url(../images/12_1pt0_facebookapp_01_centerimage.png) no-repeat center center;
+    top: 40px;
+    left: 355px;
+    position: absolute;
+    width: 276px;
+    height: 166px;
+}
+
+.rallytv {
+    background: url(../images/12_1pt0_facebookapp_01_bottomtext2.png) no-repeat center center;
+    top: 190px;
+    left: 95px;
+    position: absolute;
+    width: 788px;
+    height: 198px;
+}
+.rallylabel{  background: url(../images/12_1pt0_facebookapp_01_bottomLabel.png) no-repeat center center;
+    top: 350px;
+    left: 106px;
+    position: absolute;
+    width: 788px;
+    height: 98px;
+}
+
+.getready {
+    background-image: url(../images/14_1pt0_getreadytorally_01_topcentertext.png);
+    top: 13px;
+    left: 320px;
+    position: absolute;
+    width: 342px;
+    height: 37px;
+}
+
+.getreadyimg {
+    background-image: url(../images/14_1pt0_getreadytorally_01_topcenterimage.png);
+    top: 60px;
+    left: 342px;
+    position: absolute;
+    width: 296px;
+    height: 109px;
+}
+
+.teamname {
+    font-weight: bold;
+    top: 185px;
+    left: 265px;
+    position: absolute;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 22px;
+    width:450px;
+    text-align:center;
+}
+
+.formleft {
+    background-image: url(../images/14_1pt0_getreadytorally_01_centerleftText.png);
+    top: 234px;
+    left: 76px;
+    position: absolute;
+    width: 201px;
+    height: 111px;
+}
+
+.hammer {
+    background-image: url(../images/16_1pt0_Tplus10_01_centerImage.png);
+    top: 100px;
+    left: 320px;
+    position: absolute;
+    width: 373px;
+    height: 315px;
+    z-index: 1;
+}
+
+.showmoney {
+    background-image: url(../images/17_1pt0_Tplus10_prizes_money.png);
+    top: 11px;
+    left: 335px;
+    position: absolute;
+    width: 186px;
+    height: 99px;
+    z-index: 2;
+}
+
+.xxx {
+    background-image: url(../images/18_1pt0_Tplus10_penalties_01_xxxText.png);
+    top: 11px;
+    left: 325px;
+    position: absolute;
+    width: 208px;
+    height: 100px;
+    z-index: -1;
+}
+
+.how {
+    background-image: url(../images/19_1pt0_Tplus10_howdoi_01_navLogo.png);
+    top: 9px;
+    left: 360px;
+    position: absolute;
+    width: 121px;
+    height: 100px;
+    z-index: -1;
+}
+
+.lifeboat {
+    top: 60px;
+    left: 300px;
+    position: absolute;
+    width: 201px;
+    height: 162px;
+}
+
+.no1 {
+    background-image: url(../images/29_1pt0_hint_c10_h1_01_1.png);
+}
+
+.no2 {
+    background-image: url(../images/29_1pt0_hint_c10_h2_01_2.png);
+}
+
+.roadtrip {
+    background-image: url(../images/lt_road.png);
+}
+
+.igotit {
+    background-image: url(../images/rt_gotit.png);
+}
+
+.rank {
+    background: url(/images/rank.png);
+    width: 15px;
+    height: 74px;
+    top: 10px;
+    position: absolute;
+    left: 30px;
+}
+.rank.team_count {
+    background: url(/images/button9_07.png);
+    width: 35px;
+    height: 97px;
+    top: 4px;
+    position: absolute;
+    left: 14px;
+    background-position: 60px -3px;
+    background-size: 66px;
+    margin: 0;
+}
+
+.tools {
+    background: url(../images/lside2_Tplus10.png) no-repeat -6px;
+    width: 67px;
+}
+
+.who {
+    background-image: url(../images/lb_quest.png);
+    width: 275px;
+    height: 171px;
+}
+
+.hint {
+    background-image: url(../images/rs_hint.png);
+    background-position: -3px;
+    width: 67px;
+}
+
+.lead_game {
+    background-image: url(../images/rb_lead.png);
+}
+
+.rempty {
+    background-image: url(../images/rside_empty.png);
+}
+
+.rgreen {
+    background-image: url(../images/rs_green.png);
+    background-position: -1px;
+    width: 68px;
+}
+
+.rauth {
+    background: url(../images/submitted.gif);
+    background-position: -1px;
+    width: 68px;
+}
+.unOfficial{
+    background-image: url(../images/unofficial.gif);
+    background-position: -1px;
+    width: 68px;
+}
+.authenticate{background: url(../images/authenticate.gif) no-repeat center center; width:69px;}
+
+.rred {
+    background-image: url(../images/rs_red.png);
+    background-position: -1px;
+    width: 68px;
+}
+
+.money {
+    background: url(../images/topleft.png);
+}
+
+.rhino{
+    background: url(../images/topright.png);
+}
+
+.shooter{
+    background: url(../images/botright.png);
+}
+
+.direction{
+    background: url(../images/botleft.png);
+}
+
+.faq{
+    background: url(../images/rside.png);
+}
+
+.xsel{
+    background: url(../images/lside1.png);
+}
+
+.xusel{
+    background: url(../images/xxx_unsel.png);
+}
+
+.xwrong{
+    background: url(../images/xxx_wrong.png);
+}
+
+.lemp {
+    background-image: url(../images/lside2.png);
+}
+
+.t-10{background: url(../images/16_1pt0_Tplus10_01_Tmin10.png) no-repeat -6px -2px;}
+
+.faq_min {
+   background-image: url(../images/rside1.png);
+}
+.contactUs{background: url(../images/16_1pt0_Tplus10_01_email.png) no-repeat 0 -2px;}
+
+.tick {
+    background: url(../images/rside2.png) no-repeat 0px -2px;
+}
+
+.tleft {
+    background: url(../images/lt_sel.png) no-repeat -3px -5px !important;
+
+}
+
+.tright {
+    background: url(../images/rt_sel.png) no-repeat -1px 0px !important;
+}
+
+.bleft {
+    background: url(../images/lb_sel.png) no-repeat -2px bottom !important;
+}
+
+.bright {
+    background: url(../images/rb_sel.png) no-repeat right bottom !important;
+}
+
+.money_b {
+    background: url(../images/16_1pt0_Tplus10_01_moneyOpen.png) no-repeat -5px -6px;
+    width: 296px !important;
+    height: 165px!important;
+}
+
+.rhino_b {
+    background: url(../images/16_1pt0_Tplus10_01_rhino.png) 0px -7px no-repeat;
+    width: 274px !important;
+    height: 192px!important;
+}
+
+.shooter_b {
+    background: url(../images/16_1pt0_Tplus10_01_handShooter.png) no-repeat 7px 6px;
+    width: 283px !important;
+    height: 178px!important;
+}
+
+.direction_b {
+    background: url(../images/16_1pt0_Tplus10_01_directions.png) no-repeat -6px 0px;
+    width: 276px !important;
+    height: 173px!important;
+}
+
+.nav_bar {
+    background-color: #999;
+    z-index: 2;
+    width: 765px;
+    height: 33px;
+    position: absolute;
+    top: 547px;
+    left: 108px;
+}
+
+.hint1 {
+    font-weight: bold;
+    top: 210px;
+    left: 86px;
+    position: absolute;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 20px;
+    text-align: center;
+    width: 678px;
+    height: 209px;
+}
+
+.l1sel {
+    background-image: url(../images/l1_sel.png);
+}
+
+.scores {
+/*    background-image: url(../images/28_1pt0_leaderboard_01_grid.png);
+    width: 851px;
+    height: 313px;
+    top: 104px;
+    position: absolute;
+    z-index: -7;*/
+}
+
+.rabbit {
+    background-image: url(../images/rich_rabbit.png);
+    width: 433px;
+    height: 62px;
+    top: 10px;
+    left: 220px;
+    position: absolute;
+}
+
+.score_list {
+    font-weight: bold;
+    font-size: 32px;
+    font-family: "Comic Sans MS", cursive;
+    position: absolute;
+}
+
+.team {
+    top: 36px;
+    left: 84px;
+}
+
+.time {
+    top: 36px;
+    left: 705px;
+}
+
+.quest {
+    background-image: url(../images/26_1pt0_c1_01_questWithoutNumbers.png);
+    top: 16px;
+    left: 371px;
+    position: absolute;
+    width: 118px;
+    height: 123px;
+}
+
+.ppl {
+    background-image: url(../images/27_1pt0_igotit_answer_1_correct_01_peopleLogo.png);
+    top: 16px;
+    left: 248px;
+    position: absolute;
+    width: 358px;
+    height: 187px;
+}
+
+.qnum {
+    top: 146px;
+    left: 414px;
+    position: absolute;
+    width: 29px;
+    height: 40px;
+}
+
+.qnum {
+    top: 146px;
+    left: 414px;
+    position: absolute;
+    width: 29px;
+    height: 40px;
+}
+
+.check_block {
+    width: auto;
+    height: 75px;
+    padding-top: 3px;
+    top: 220px;
+    left: 30px;
+    position: absolute;
+    float:left;
+}
+
+.check_num {
+    width: 75px;
+    height: 80px;
+    margin-top: 4px;
+    margin-right: 5px;
+    float:left;
+}
+
+.check_tick {background: url(../images/tickcheck.png) no-repeat center;}
+.check_wrong {background: url(../images/check_wrong_min.png) no-repeat center center;}
+
+.q0 {background: url(../images/success_numbers_01.png);}
+
+.sq1{background: url(../images/success_numbers_01.png) no-repeat;}
+.sq2{background: url(../images/success_numbers_02.png) no-repeat;}
+.sq3{background: url(../images/success_numbers_03.png) no-repeat;}
+.sq4{background: url(../images/success_numbers_04.png) no-repeat;}
+.sq5{background: url(../images/success_numbers_05.png) no-repeat;}
+.sq6{background: url(../images/success_numbers_06.png) no-repeat;}
+.sq7{background: url(../images/success_numbers_07.png) no-repeat;}
+.sq8{background: url(../images/success_numbers_08.png) no-repeat;}
+.sq9{background: url(../images/success_numbers_09.png) no-repeat;}
+.sq10{background: url(../images/success_numbers_10.png) no-repeat;}
+
+.urteam {
+    background-image: url(../images/27_1pt0_igotit_auth_auth_0_wrong_01_Teamtext.png);
+    top: 157px;
+    left: 634px;
+    position: absolute;
+    width: 193px;
+    height: 25px;
+}
+
+.teamshort {
+    background-image: url(../images/27_1pt0_igotit_auth_auth_0_wrong_01_Teamtext_short.png);
+    top: 157px;
+    left: 668px;
+    position: absolute;
+    width: 163px;
+    height: 25px;
+}
+
+.flag {
+    background: url(../images/27_1pt0_igotit_answer_10_correct_01_done.png) center -4px;
+    top: 26px;
+    left: 185px;
+    position: absolute;
+    width: 483px;
+    height: 443px;
+}
+
+.crosshand {
+    width: 663px;
+    height: 229px;
+    left: 99px;
+    top: 124px;
+    position: absolute;
+    background-image: url(../images/cross_hand.png);
+}
+
+.shit_logo {
+    width: 366px;
+    height: 46px;
+    left: 221px;
+    top: 148px;
+    position: absolute;
+    background-image: url(../images/27_1pt0_igotit_submit_3_wrong_01_YouGotShit.png);
+}
+
+.xwrong {
+    background: url(../images/xxx_wrong.png) no-repeat 0px 3px;
+}
+
+.rsel1 { background-image:url(../images/r1_sel.png); background-position: -2px -2px; }
+
+
+.crhino {
+    top: 10px;
+    left: 365px;
+    position: absolute;
+    width: 121px;
+    height: 100px;
+    z-index: -1;
+    background-image: url(../images/20_1pt0_Tplus10_rules_01_rhino.png);
+    }
+
+.wtf {
+    top: 10px;
+    left: 370px;
+    position: absolute;
+    width: 88px;
+    height: 113px;
+    z-index: -1;
+    background-image: url(../images/21_1pt0_Tplus10_faq_01_wtf.png);
+    }
+
+.rsel {
+    background-image: url(../images/r_sel.png);
+}
+
+.rsel2 { background-image:url(../images/r2_sel.png); background-position: -5px -1px; }
+
+
+.rfaq {
+    background-image: url(../images/rside1.png);
+}
+
+.note {
+    background-image: url(../images/22_1pt0_Tplus10_toolkit_01_notepad.png);
+    top: 10px;
+    left: 365px;
+    position: absolute;
+    width: 121px;
+    height: 100px;
+    z-index: -1;
+}
+
+.cshoot {
+    background-image: url(../images/23_1pt0_Tplus10_video_01_shooterlogo.png);
+    top: 11px;
+    left: 340px;
+    position: absolute;
+    width: 175px;
+    height: 100px;
+    z-index: -1;
+}
+
+.pos1 {
+    top: 16px;
+    left: 237px;
+    position: absolute;
+    width: 113px;
+    height: 118px;
+    z-index: 3000;
+}
+
+.pos2 {
+    top: 16px;
+    left: 357px;
+    position: absolute;
+    width: 117px;
+    height: 119px;
+    z-index: 3000;
+}
+
+.pos3 {
+    top: 19px;
+    left: 482px;
+    position: absolute;
+    width: 114px;
+    height: 113px;
+    z-index: 3000;
+}
+
+.bulb3 {
+    background-image: url(../images/27_1pt0_igotit_answer_1_wrong_01_BulbNum3.png);
+}
+
+.bulb2 {
+    background-image: url(../images/27_1pt0_igotit_answer_1_wrong_01_BulbNum2.png);
+}
+
+.bulb1 {
+    background-image: url(../images/27_1pt0_igotit_auth_auth_0_wrong_01_BulbNum1.png);
+}
+
+.x {
+    width: 97px;
+    height: 108px;
+    background-image: url(../images/27_1pt0_igotit_answer_1_wrong_01_X.png);
+}
+
+.loss {
+    width: 515px;
+    height: 178px;
+    left: 150px;
+    top: 141px;
+    position: absolute;
+    background-image: url(../images/27_1pt0_igotit_answer_1_wrong_01_hands.png);
+}
+
+.mail {
+    width: 117px;
+    height: 119px;
+    left: 357px;
+    top: 146px;
+    position: absolute;
+    background-image: url(../images/27_1pt0_igotit_auth_auth_0_wrong_01_AnswerMail.png);
+}
+
+.igotit_text {
+    width: 170px;
+    height: 59px;
+    left: 335px;
+    top: 135px;
+    position: absolute;
+    background-image: url(../images/i_got_it_logo.png);
+}
+
+.hintPenal {
+    font-weight: bold;
+    top: 320px;
+    left: 86px;
+    position: absolute;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 22px;
+    text-align: center;
+    width: 678px;
+    height: 209px;
+}
+
+.playDesc {
+    font-weight: bold;
+    top: 270px;
+    left: 86px;
+    position: absolute;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 22px;
+    text-align: center;
+    width: 678px;
+    height: 209px;
+}
+
+.gotItBut {
+    top: 390px;
+    left: 345px;
+    width: 166px;
+    height: 68px;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    background-image: url(../images/27_1pt0_igotit_answer_1_wrong_01_gotit.png);
+}
+
+.taBut {
+    top: 325px;
+    left: 80px;
+    width: 218px;
+    height: 26px;
+    position: absolute;
+    background-image: url(../images/27_1pt0_igotit_auth_auth_0_wrong_01_teamAnswer.png);
+}
+
+.yaBut {
+    top: 383px;
+    left: 78px;
+    width: 196px;
+    height: 26px;
+    position: absolute;
+    background-image: url(../images/27_1pt0_igotit_submit_0_wrong_01_yourAnswer.png);
+}
+
+.taInp {
+    top: 368px;
+    left: 292px !important;
+    width: 410px !important;
+    height: 66px !important;
+    z-index:2 !important;
+    padding:0px !important;
+    padding-left: 5px !important;
+    font-size: 36px !important;
+    position: absolute !important;
+    background-image: url(../images/27_1pt0_igotit_auth_auth_0_wrong_01_teamAnswerBox.png) !important;
+    border:none !important;
+}
+
+.taInp1 {
+    top: 313px !important;
+    left: 342px !important;
+    width: 285px !important;
+    height: 52px !important;
+    padding-left: 5px !important;
+    font-size: 36px !important;
+    position: absolute !important;
+    z-index:2 !important;
+    background-image: url(../images/27_1pt0_igotit_auth_auth_0_wrong_01_teamAnswerBox.png) !important;
+}
+
+.auth {
+    top:390px;
+    left:240px;
+    width:148px;
+    height:61px;
+    cursor: pointer;
+    z-index: 2;
+    position:absolute;
+    background-image: url(../images/27_1pt0_igotit_auth_auth_0_wrong_01_authenticate.png);
+}
+
+.subBut {
+    top: 390px;
+    left: 350px;
+    width: 129px;
+    height: 55px;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    background-image: url(../images/27_1pt0_igotit_submit_0_wrong_01_submit.png);
+}
+
+.rej {
+    top:390px;
+    left:440px;
+    width:147px;
+    height:62px;
+    cursor: pointer;
+    z-index: 2;
+    position:absolute;
+    background-image: url(../images/27_1pt0_igotit_auth_auth_0_wrong_01_Reject.png);
+}
+.topchange {
+    top:220px;}
+.topchange1 {
+    top:300px;}
+.topchange2 {
+    top:315px;}
+.pleaseWait{ text-align:center; padding-top:150px;}
+.valid { color:#F00; }
+
+.timer { 
+    top: 7px;
+    float:left;
+    left: 68px;
+    position:relative; }
+.qtimer{top: 7px;
+    float:left;
+    left: 88px;
+    position:relative; }
+
+
+.days1{position:relative;float:left;}
+.days2{position:relative;float:left; left:2px;}
+.hour1{ position:relative;float:left;}
+.hour2{ position:relative;float:left;left:2px;}
+.mins1{ position:relative;float:left;left:2px;}
+.mins2{ position:relative;float:left;left:4px;}
+.secs1{ position:relative;float:left;left:4px;}
+.secs2{ position:relative;float:left;left:6px;}
+
+.blocks{position:relative;float:left;margin-left:2px;width:29px; height:40px;}
+.videoContainer{positon:absolute; top:0px; left:0px;}
+.modal-backdrop{z-index:10030;}
+.modal{z-index:10050;}
+
+.wrongAn{position:absolute; top:150px; text-align:center; left:28%; color:#C30;}
+.leaderBoardCon{ position:absolute; width:790px; height:100px;top: 105px; left: 60px;}
+.leaderBoardCon .team_container{width:100%; float:left; height:30px; clear:both;}
+.leaderBoardCon .team_container ul{width:100%; height:33px; float:left; margin:0px; list-style:none;}
+.leaderBoardCon .team_container ul li{height:100%; float:left; list-style:none; text-align:center; font-size:1.4em; font-weight:bold; line-height:1.8em;}
+
+.rank_blk{width:27px; background:url(../images/ranking_bg.png) no-repeat 2px -4px;}
+.name_blk{width:140px; background:url(../images/ranking_bg.png) no-repeat -32px -4px;}
+.score_blk{width:49px; background:url(../images/ranking_bg.png) no-repeat -175px -4px;}
+.score_blk_0{width:47px; background:url(../images/ranking_bg.png) no-repeat -175px -4px;}
+.score_blk_1{width:44px; background:url(../images/ranking_bg.png) no-repeat -222px -3px;}
+.score_blk_2{width:45px; background:url(../images/ranking_bg.png) no-repeat -266px -3px;}
+.score_blk_3{width:42px; background:url(../images/ranking_bg.png) no-repeat -312px -3px;}
+.time_blk{width:110px; background:url(../images/ranking_bg.png) no-repeat -32px -6px;}
+.penNo{color:#F00;}
+
+.infoText{position: absolute;top: 230px;left: 255px;width: 80%;height: 250px;overflow-y: auto;}
+.teamNameLable{position:absolute; background:url(../images/27_1pt0_igotit_auth_auth_0_wrong_01_Teamtext_short.png) no-repeat; width:163px; height:25px; left:60px; top:30px;}
+.teamNameText{position:absolute; font-size:3.6em; font-weight:bold; width:100%; text-align:center; top:15px}
+.rankText{position:absolute; left:14px; top:85px; font-size:2em; font-weight:bold;}
+
+/*.infoText{position: absolute;top: 270px;left: 200px;width: 60%;height: 250px;overflow-y: auto; font-size:14px; font:"Times New Roman", Times, serif; }*/
+.welcome { position:absolute; z-index:10000; text-align:center;}
+.mbot_blank{background:url(../images/botmid.png) no-repeat 0px 8px;}
+.contactustext{font-size:2em;}
+.emailNotification{position:absolute; width:55%; height:auto; top:230px; left:245px;}
+.prizemoney{position:absolute; text-align:center; width:70%; height:auto; top:230px; left:140px;}
+.winnerBlock{position:absolute; width:70%; height:auto; top:230px; left:150px; font-size:2em;}
+.noSpaces{ position:absolute; width:auto; font-size:1.5em; top:200px; right:50px; font-weight:bold;}
+::-webkit-input-placeholder{color:#666; font-size:15px; font-weight:normal;}
+.join_latter ::-webkit-input-placeholder,.memberJoin_fields ::-webkit-input-placeholder{ padding-top:7px;}
+.successInformation{position: absolute;font-size: 2em;text-align: center;top: 100px;width: 90%;left: 5%;}
+
+.twleft{background: url(../images/lt_winner.png) no-repeat 3px 1px !important;}
+.twright{background: url(../images/rt_winner.png) no-repeat 3px 0px !important;}
+.bwleft{background: url(../images/lb_winner.png) no-repeat -2px bottom !important;}
+.bwright{background: url(../images/rb_winner.png) no-repeat right bottom !important;}
+.official_top{  background: url(../images/topmid_official.png) no-repeat center center !important;}
+.welcome_game{position:absolute; z-index:10000; text-align:center;}
+
+.auth_btn {
+    background: url(/images/auth.png);
+    width: 295px;
+    height: 64px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: white;
+}
+.auth_btn img {
+    width: 20px;
+}
+.auth_btns {
+    width: auto;
+    text-align: center;
+}
+
+.register_form {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    text-align: center;
+}
+.input_small {
+    margin-bottom: 0;
+    width: 325px;
+    height: 36px;
+    background: url(/images/registerInput.png) no-repeat;
+    outline: none;
+    border: none;
+    padding-left: 9px;
+}
+.register_form .labels {
+    background: url(/images/registerFields.png);
+    position: absolute;
+    width: 212px;
+    height: 369px;
+    left: 106px;
+    top: 8px;
+}
+.register_btn {
+    background: url(/images/button1_11.png);
+    width: 157px;
+    height: 64px;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    left: 710px;
+    top: 140px;
+    background-position: 158px 66px;
+}
+
+.text {
+    position: absolute;
+    width: 70%;
+    top: 160px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    font-family: arial;
+    font-weight: bold;
+    padding: 0 15%;
+}
+.text p {
+    margin-bottom: 18px;
+    line-height: 1.3em;
+}
+.join_team_text {
+    top: 210px;
+}
+.email_text {
+    top: 220px;
+}
+
+input.tName::-webkit-input-placeholder { 
+    font-size: 20px;
+}
+input.tName::-moz-placeholder { 
+    font-size: 20px;
+}
+input.tName:-ms-input-placeholder { 
+    font-size: 20px;
+}
+
+.clock {
+    text-align: center;
+    padding-top: 15px;
+}
+.clock div {
+    display: inline-block;
+    width: 29px;
+    height: 40px;
+    background-image: url(/images/button6_08.png);
+}
+.clock .clock_colon {
+    background-image: url(/images/clock_colon.png);
+    width: 10px;
+    height: 21px;
+    margin-bottom: 9px;
+}
+.clock .clock_num_0 { background-position: 346px 160px; }
+.clock .clock_num_1 { background-position: 313px 160px; }
+.clock .clock_num_2 { background-position: 277px 160px; }
+.clock .clock_num_3 { background-position: 241px 160px; }
+.clock .clock_num_4 { background-position: 206px 160px; }
+.clock .clock_num_5 { background-position: 171px 160px; }
+.clock .clock_num_6 { background-position: 135px 160px; }
+.clock .clock_num_7 { background-position: 103px 160px; }
+.clock .clock_num_8 { background-position: 68px 160px; }
+.clock .clock_num_9 { background-position: 35px 160px; }
+
+.join_team_fields {
+    top: 310px;
+}
+
+.jointherally_btn div {
+    background-image: url(/images/button1_08.png);
+    width: 258px;
+    height: 52px;
+    background-position: -42px 149px;
+    top: 13px;
+    position: relative;
+    left: 10px;
+}
+
+.btn {
+    z-index: 10;
+    cursor: pointer;
+}
+.btn.righttop:hover, .righttop.highlighted {
+    background-image: url(/images/hover_04.png);
+    z-index: 50;
+}
+.btn.rightbot:hover, .rightbot.highlighted {
+    background-image: url(/images/hover_12.png);
+    z-index: 50;
+}
+.btn.leftbot:hover, .leftbot.highlighted {
+    background-image: url(/images/hover_10.png);
+    z-index: 50;
+}
+.btn.lefttop:hover, .lefttop.highlighted {
+    background-image: url(/images/hover_02.png);
+    z-index: 50;
+}
+.btn.rside:hover, .rside.highlighted {
+    background-image: url(/images/hover_09.png);
+    z-index: 50;
+}
+.btn.lside:hover, .lside.highlighted {
+    background-image: url(/images/hover_07.png);
+    z-index: 50;
+}
+.btn.mbot:hover, .mbot.highlighted {
+    background-image: url(/images/hover_13.png);
+    z-index: 50;
+}
+.btn.mtop:hover, .mtop.highlighted {
+    background-image: url(/images/hover_03.png);
+    z-index: 50;
+}
+
+.checkered {
+    z-index: 60;
+}
+.righttop.checkered {
+    background-image: url(/images/button8_04.png);
+    top: 2px;
+    right: 2px;
+}
+.rightbot.checkered {
+    background-image: url(/images/button8_12.png);
+    bottom: 5px;
+    right: 7px;
+}
+.leftbot.checkered {
+    background-image: url(/images/button8_10.png);
+    left: 1px;
+    bottom: 3px;
+}
+.lefttop.checkered {
+    background-image: url(/images/button8_02.png);
+    top: 2px;
+    left: 2px;
+}
+
+.mask {
+    background: url(/images/center_mask.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.prize {
+    font-size: 45px;
+    margin: 0;
+    position: relative;
+    top: -1px;
+    font-weight: 600;
+}
+
+.auth_facebook, .signin_facebook {
+    background: url(/images/button7_11.png) no-repeat;
+    width: 264px;
+    height: 51px;
+    cursor: pointer;
+}
+.auth_google, .signin_google {
+    background: url(/images/button7_13.png) no-repeat;
+    width: 263px;
+    height: 54px;
+    cursor: pointer;
+}
+.auth_local, .signin_local {
+    width: 260px;
+    height: 47px;
+    cursor: pointer;
+}
+.auth_local {
+    background: url(/images/signup.png);
+}
+.signin_local {
+    background: url(/images/signin.png);
+}
+
+.logout_btn div {
+    background-image: url(/images/logout.png);
+    width: 152px;
+    height: 50px;
+    top: 18px;
+    left: 70px;
+    position: relative;
+}
+.buildteam_btn div {
+    background-image: url(/images/button1_08.png);
+    width: 256px;
+    height: 39px;
+    background-position: -37px 97px;
+    top: 119px;
+    position: relative;
+    left: 14px;
+}
+.jointeam_btn div {
+    background-image: url(/images/button1_08.png);
+    width: 256px;
+    height: 44px;
+    background-position: -37px 49px;
+    top: 119px;
+    position: relative;
+    left: 6px;
+}
+
+.buildteam .labels, .jointeam .labels {
+    background-image: url(/images/buildTeamFields.png);
+    width: 324px;
+    height: 105px;
+    position: absolute;
+    left: 88px;
+}
+.buildteam.login_fields {
+    top: 260px;
+}
+.buildteam .input_small, .jointeam .input_small {
+    position: relative;
+    right: -185px;
+    margin-bottom: 22px;
+}
+
+.jointeam {
+    top: 320px;
+}
+.join_btn {
+    background-image: url(/images/button1_11.png);
+    cursor: pointer;
+    width: 160px;
+    height: 65px;
+    position: absolute;
+    left: 410px;
+    bottom: 98px;
+    background-position: 159px 68px;
+}
+
+.leave_btn {
+    background: url(/images/leave.png);
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    margin-left: 0px;
+    float: right;
+}
+
+.destroyteam {
+    background-image: url(/images/deleteTeam.png);
+    width: 185px;
+    height: 27px;
+    display: inline-block;
+    float: right;
+    margin-right: 12px;
+}
+
+.teamadmin, .teamlobby {
+    position: absolute;
+    top: 180px;
+    left: 100px;
+    width: 100%;
+}
+.teamlobby {
+    width: 780px;
+}
+.teamadmin .roster {
+    position: absolute;
+    left: 480px;
+    width: 304px;
+}
+.teamlobby .roster {
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 78px;
+}
+.teamroster {
+    width: 286px;
+    height: 34px;
+    background: url(/images/teamRoster.png);
+    margin-bottom: 10px;
+}
+.rosternumbers {
+    width: 23px;
+    height: 167px;
+    background: url(/images/rosterNumbers.png);
+    position: absolute;
+}
+
+.input_smaller {
+    background-size: 245px;
+    width: 240px;
+    height: 33px;
+    margin-left: 24px;
+}
+
+.invite {
+    position: absolute;
+    top: 175px;
+    left: 14px;
+    width: 385px;
+}
+.invite .input_smaller {
+    margin-left: 0;
+}
+.inviteteammates {
+    width: 286px;
+    height: 35px;
+    background: url(/images/inviteTeammates.png);
+    position: relative;
+    left: 30px;
+    margin-bottom: 10px;
+}
+.label_email {
+    background: url(/images/email.png);
+    display: inline-block;
+    width: 85px;
+    height: 24px;
+}
+.teamrequirements {
+    background: url(/images/button9_06.png);
+    width: 293px;
+    height: 36px;
+    background-position: 309px 37px;
+    position: absolute;
+    left: 75px;
+    border-bottom: 2px solid rgba(0,0,0,0.6);
+    padding: 0 10px;
+    top: -5px;
+}
+.teamrequirements_text {
+    background: url(/images/teamRequirements.png);
+    width: 474px;
+    height: 117px;
+    position: absolute;
+    background-position: 0 -42px;
+    top: 40px;
+}
+
+.teamlobby .roster {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.termin_btn {
+    background: url(/images/in.png);
+    width: 106px;
+    height: 69px;
+    display: inline-block;
+}
+.termor {
+    background: url(/images/or.png);
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+    bottom: 20px;
+    margin: 0 16px;
+}
+.termout_btn {
+    background: url(/images/out.png);
+    width: 106px;
+    height: 69px;
+    display: inline-block;
+}
+.termbuttons {
+    width: 292px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: 40px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.confirm {
+    position: absolute;
+    left: 68px;
+    top: 0;
+}
+.alert {
+    top: 66px;
+}
+.yousure {
+    background: url(/images/youSure.png);
+    width: 382px;
+    height: 117px;
+    margin-bottom: 20px;
+}
+.yes {
+    background: url(/images/yes.png);
+    width: 143px;
+    height: 90px;
+    display: inline-block;
+    cursor: pointer;
+}
+.no {
+    background: url(/images/no.png);
+    width: 143px;
+    height: 90px;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 54px;
+}
+.confirm_content {
+    position: absolute;
+    top: 120px;
+    left: 242px;
+}
+
+.outgraphic {
+    background: url(/images/outGraphic.png);
+    width: 320px;
+    height: 310px;
+    position: relative;
+    left: 380px;
+}
+.outtext {
+    top: 125px;
+}
+
+.orphaned {
+    position: absolute;
+    left: 68px;
+    top: 0;
+}
+.ohmyrally {
+    background: url(/images/button9_03.png);
+    width: 411px;
+    height: 72px;
+    position: absolute;
+    left: 270px;
+    top: 22px;
+}
+.orphaned_text {
+    background: url(/images/button9_08.png);
+    width: 813px;
+    height: 248px;
+    position: absolute;
+    top: 105px;
+    left: 20px;
+}
+.ok, .ok_btn {
+    background: url(/images/button9_06.png);
+    width: 100px;
+    height: 85px;
+    position: absolute;
+    top: 355px;
+    left: 374px;
+    cursor: pointer;
+}
+
+.introvideo, .video, 
+#introvideo, #video {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+}
+.cover {
+    z-index: 1000;
+}
+
+.home_btn div {
+    background: url(/images/button3_02.png);
+    width: 285px;
+    height: 173px;
+    position: relative;
+    top: -35px;
+    left: 16px;
+}
+.faq_btn div {
+    background: url(/images/button2_10.png);
+    width: 285px;
+    height: 177px;
+    position: relative;
+    top: 2px;
+    left: -3px;
+}
+.video_btn div {
+    background: url(/images/button2_12.png);
+    width: 283px;
+    height: 177px;
+    position: relative;
+    top: 2px;
+}
+.rules_btn div {
+    background: url(/images/button2_04.png);
+    width: 283px;
+    height: 173px;
+    position: relative;
+    left: -2px;
+}
+.startingline_btn div {
+    background: url(/images/button1_12.png);
+    width: 284px;
+    height: 46px;
+    position: relative;
+    left: 64px;
+    background-position: 0 48px;
+    top: 16px;
+}
+.prizes_btn div {
+    background: url(/images/button2_07.png);
+    width: 82px;
+    height: 248px;
+}
+.info_btn div {
+    background: url(/images/button1_08.png);
+    width: 40px;
+    height: 212px;
+    position: relative;
+    left: 18px;
+    top: 18px;
+}
+.post_btn div {
+    background: url(/images/button9_09.png);
+    width: 55px;
+    height: 232px;
+    position: relative;
+    left: 18px;
+    top: 2px;
+    background-position: -17px 0;
+}
+
+.subtitle {
+    font-size: 36px;
+}
+
+.rside_sep {
+    background: url(/images/rside_sep.png);
+    width: 55px;
+    height: 12px;
+    position: absolute;
+    top: 120px;
+    left: 19px;
+    z-index: 20;
+}
+.lside_sep {
+    background: url(/images/rside_sep.png);
+    width: 52px;
+    height: 12px;
+    position: absolute;
+    top: 118px;
+    left: 10px;
+    z-index: 20;
+}
+
+.contact_btn div {
+    background: url(/images/button2_09.png);
+    width: 84px;
+    height: 124px;
+    position: relative;
+    top: 4px;
+}
+.rside .info_btn div {
+    background: url(/images/button2_09.png);
+    width: 84px;
+    height: 124px;
+    background-position: 0 124px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.rside_up:hover, .rside_up.highlighted {
+    background: url(/images/hover_09.png);
+    height: 123px;
+    margin-bottom: 1px;
+}
+.rside_down {  
+    height: 120px;
+    position: relative;
+    top: 6px;
+}
+.rside_down:hover, .rside_down.highlighted {
+    background: url(/images/hover_09.png);
+    background-position: 0 118px;
+}
+.btn.lside_up:hover, .lside_up.highlighted {
+    background: url(/images/hover_07.png);
+    height: 123px;
+    margin-bottom: 1px;
+}
+.lside_down {
+    height: 112px;
+    position: absolute;
+    top: 130px;
+    width: 65px;
+    left: 12px;
+}
+.btn.lside_down:hover, .lside_down.highlighted {
+    background: url(/images/hover_07.png);
+    background-position: -12px 119px;
+}
+
+.up {
+    z-index: 10;
+}
+.down {
+    z-index: -10;
+}
+
+.getonwithit_btn {
+    background: url(/images/button1_02.png);_01n_02.png);
+    width: 216px;
+    height: 65px;
+    background-position: -70px 66px;
+    position: absolute;
+    left: 386px;
+    bottom: 86px;
+}
+
+.contactus_logo {
+    background: url(/images/contactUs.png);
+    width: 194px;
+    height: 101px;
+    position: absolute;
+    left: 400px;
+    top: 85px;
+}
+
+
+.replay_btn div {
+    background: url(/images/replay.png);
+    width: 251px;
+    height: 119px;
+    position: relative;
+    left: 20px;
+    top: 14px;
+}
+.answer_btn div {
+    background: url(/images/answer.png);
+    width: 244px;
+    height: 138px;
+    position: relative;
+    left: 20px;
+    top: 18px;
+}
+.question_btn div {
+    background: url(/images/question.png);
+    width: 250px;
+    height: 123px;
+    position: relative;
+    left: 16px;
+    top: 40px;
+}
+.leader_btn div {
+    background: url(/images/leader.png);
+    width: 241px;
+    height: 144px;
+    position: relative;
+    left: 20px;
+    top: 14px;
+}
+
+.board {
+    position: absolute;
+    top: 76px;
+    left: 122px;
+}
+.board .header {
+    background: url(/images/leaderboardHeader.png);
+    width: 698px;
+    height: 100px;
+    margin-bottom: 4px;
+    position: relative;
+    left: 14px;
+}
+.board .header .question_number {
+    position: relative;
+    top: 85px;
+    left: 116px;
+    width: 44.35px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+}
+.board .row {
+    width: 736px;
+    height: 27px;
+    position: relative;
+}
+.board .row.gap {
+    margin-top: 20px;
+}
+.board .footer {
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 8px;
+}
+.board .row .teamRank {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+}
+.board .row .teamName {
+    font-size: 17px;
+    width: 114px;
+    text-align: center;
+    top: 3px;
+    position: relative;
+    left: 10px;
+}
+.board .row .time {
+    font-size: 13px;
+    text-align: right;
+    width: 40px;
+    position: absolute;
+    top: 6px;
+    z-index: 3;
+    font-weight: bold;
+}
+.board .row .question1 { left: 134px; }
+.board .row .question2 { left: 182px; }
+.board .row .question3 { left: 230px; }
+.board .row .question4 { left: 278px; }
+.board .row .question5 { left: 326px; }
+.board .row .question6 { left: 375px; }
+.board .row .question7 { left: 424px; }
+.board .row .question8 { left: 473px; }
+.board .row .question9 { left: 522px; }
+.board .row .question10 { left: 571px; }
+.board .row .total_time {
+    font-size: 20px;
+    width: 124px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.board .row .penalty {
+    background: red;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: -2px;
+    z-index: 3;
+}
+.board .row .penalty0 { top: 0px; }
+.board .row .penalty1 { top: 6px; }
+.board .row .penalty2 { top: 12px; }
+.board .row .bg_notdone {
+    background: #c3cdd7;
+    position: absolute;
+    right: 122px;
+    top: 1px;
+    height: 22px;
+    z-index: 2;
+}
+.board .row .bg_done {
+    background: #fda455;
+    position: absolute;
+    right: 122px;
+    top: 1px;
+    height: 22px;
+    width: 490px;
+    z-index: 1;
+}
+.board .row .outline {
+    background: url(/images/leaderboardRow.png) no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.answer_input {
+    background: url(/images/button4_08.png);
+    padding-left: 142px;
+    width: 406px;
+    height: 62px;
+    position: absolute;
+    left: 150px;
+    top: 340px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+}
+
+.submit_btn, .upload_btn {
+    background-image: url(/images/button1_11.png);
+    cursor: pointer;
+    width: 120px;
+    height: 51px;
+    position: absolute;
+    left: 418px;
+    bottom: 100px;
+    background-position: -17px -3px;
+}
+
+.confirm_btn {
+    background: url(/images/button4_13.png);
+    position: absolute;
+    left: 305px;
+    bottom: 100px;
+    width: 150px;
+    height: 65px;
+    background-position: -24px -4px;
+}
+.reject_btn {
+    background: url(/images/button4_13.png);
+    position: absolute;
+    left: 520px;
+    bottom: 100px;
+    width: 150px;
+    height: 61px;
+    background-position: 184px -5px;
+}
+.answeror {
+    position: absolute;
+    left: 452px;
+    bottom: 116px;
+}
+
+.browse_btn {
+    background-image: url(/images/browse.png);
+    width: 142px;
+    height: 61px;
+    position: absolute;
+    left: 704px;
+    bottom: 198px;
+}
+
+.igotit_btn {
+    position: absolute;
+    left: 342px;
+    top: 422px;
+    width: 301px;
+    height: 79px;
+    background: url(/images/igotit.png);
+}
+
+.alert .text {
+    top: 110px;
+    font-size: 46px;
+    color: white;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;
+    overflow-wrap: break-word;
+}
+
+.infoleft_btn div {
+    background: url(/images/button1_12.png);
+    height: 112px;
+    width: 25px;
+    position: relative;
+    left: 15px;
+    background-position: -254px -8px;
+}
+.homeleft_btn div {
+    background: url(/images/homeleft.png);
+    width: 27px;
+    height: 96px;
+    position: relative;
+    left: 26px;
+    top: 8px;
+}
+
+.rank_number {
+    position: absolute;
+    left: 16px;
+    top: 97px;
+    font-size: 18px;
+    width: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+.progress {
+    height: 55px;
+    position: absolute;
+    left: 285px;
+    top: 344px;
+    background: #fda455;
+}
+
+.rejected {
+    background: url(/images/button3_07.png);
+    width: 82px;
+    height: 248px;
+}
+.rside_confirm {
+    background: url(/images/button3_09.png);
+    width: 84px;
+    height: 248px;
+}
+.submitted {
+    background: url(/images/button4_09.png);
+    width: 84px;
+    height: 248px;
+}
+
+
+/**
+ * Emulating <blink> using WebKit CSS3 animation        
+ *   This code is part of John Smith's blog
+ *
+ * Copyright 2010 by John Smith, All Rights Reserved
+ *
+ * @link   http://www.john-smith.me/emulating--lt-blink-gt--using-webkit-css3-animation
+ * @date   18th October 2010 at 11:01 p.m.
+ * @author John Smith
+ */
+@-webkit-keyframes blinker { from {opacity:1.0;} to {opacity:0.0;} }
+        @keyframes blinker { from {opacity:1.0;} to {opacity:0.0;} }
+
+.blink {
+   text-decoration:blink;
+
+  -webkit-animation-name:blinker;
+          animation-name:blinker;  
+  -webkit-animation-iteration-count:infinite;  
+          animation-iteration-count:infinite;  
+  -webkit-animation-timing-function:cubic-bezier(1.0,0,0,1.0);
+          animation-timing-function:cubic-bezier(1.0,0,0,1.0);
+  -webkit-animation-duration:1s; 
+          animation-duration:1s; 
+}
+
+.top25 { top: 220px; }
+.top35 { top: 350px; }
+.top36 { top: 360px; }
+.top42 { top: 420px; }
+
+.igotit_logo {
+    background: url(/images/igotit_logo.png);
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    width: 171px;
+    height: 59px;
+}
+
+.attempt {
+    position: absolute;
+    top: 70px;
+    background: url(/images/attempts.png);
+    height: 123px;
+    width: 122px;
+}
+.attempt1 {
+    background-position: 0;
+    left: 306px;
+}
+.attempt2 {
+    background-position: 245px;
+    left: 428px;
+}
+.attempt3 {
+    background-position: 123px;
+    left: 550px;
+}
+.attempt.wrong {
+    background: url(/images/attemptWrong.png);
+    background-position: 0;
+}
+
+.question_logo {
+    background: url(/images/questionMark.png);
+    width: 95px;
+    height: 126px;
+    position: absolute;
+    left: 448px;
+    top: 80px;
+}
+
+.correct_logo {
+    background: url(/images/button4_08.png);
+    background-position: 400px -62px;
+    width: 400px;
+    height: 187px;
+    position: absolute;
+    left: 270px;
+    top: 76px;
+}
+.correct_numbers {
+    background: url(/images/button6_08.png);
+    width: 736px;
+    height: 72px;
+    background-position: -75px -176px;
+    position: absolute;
+    top: 290px;
+    left: 124px;
+}
+.correct_check {
+    background: url(/images/button6_08.png);
+    width: 70px;
+    height: 72px;
+    background-position: -74px -176px;
+    display: inline-block;
+    margin: 0;
+}
+
+.incorrect_logo {
+    background: url(/images/thumbsDown.png);
+    width: 547px;
+    height: 182px;
+    position: absolute;
+    top: 190px;
+    left: 200px;
+}
+
+.videoplay_btn {
+    position: relative;
+    left: 20px;
+    top: 23px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+.videoplay_btn.play {
+    background: #fda455;
+}
+.videoplay_btn.pause {
+    background: #c3cdd7;
+}
+.videoscrub {
+    position: absolute;
+    left: 60px;
+    height: 30px;
+    width: 330px;
+    top: 23px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.videoscrub div {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fda455;
+}
+
+.team_name {
+    width: 100%;
+    position: absolute;
+    top: 23px;
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.faq_logo {
+    background: url(/images/button3_08.png);
+    width: 133px;
+    height: 127px;
+    position: absolute;
+    left: 424px;
+    top: 50px;
+    background-position: -140px -10px;
+}
+.toolkit_logo {
+    background: url(/images/button3_06.png);
+    width: 95px;
+    height: 101px;
+    background-position: -120px 0;
+    position: absolute;
+    left: 440px;
+    top: 80px;
+}
+.rules_logo {
+    background: url(/images/button3_08.png);
+    width: 146px;
+    height: 106px;
+    position: absolute;
+    left: 420px;
+    top: 75px;
+    background-position: 354px -32px;
+}
+.videoinfo_logo {
+    background: url(/images/button3_08.png);
+    width: 176px;
+    height: 111px;
+    position: absolute;
+    left: 406px;
+    top: 80px;
+    background-position: -279px -32px;
+}
+
+.terms_link {
+    display: block;
+    margin: 4px;
+    text-align: center;
+    font-size: 12px;
+    color: #787878;
+}
+
+.youredone {
+    background: url(/images/youredone.png);
+    width: 470px;
+    height: 440px;
+    position: absolute;
+    left: 262px;
+    top: 98px;
+}
+
+.mobile_video {
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.label {
+    display: inline-block;
+    width: 130px;
+    height: 33px;
+    vertical-align: text-bottom;
+    background: no-repeat;
+}
+.email_label {
+    background-image: url(/images/email.png);
+}
+.pass_label {
+    background-image: url(/images/pass.png);
+}
+
+.frozen_logo {
+    background: url(/images/frozen.png);
+    width: 317px;
+    height: 47px;
+    position: absolute;
+    left: 326px;
+    top: 212px;
+}
+
+.unofficial_logo {
+    background: url(/images/button4_02.png);
+    width: 260px;
+    height: 72px;
+    position: absolute;
+    left: 84px;
+    top: 14px;
+}
+.official_logo {
+    background: url(/images/button8_03.png);
+    width: 260px;
+    height: 72px;
+    background-position: -80px -6px;
+    margin: 10px auto;
+}
+
+.email_small_label {
+    background-image: url(/images/email_small.png);
+    width: 85px;
+    height: 24px;
+}
+
+.prizes_logo {
+    background: url(/images/button3_08.png);
+    width: 200px;
+    height: 108px;
+    position: absolute;
+    left: 392px;
+    top: 80px;
+    background-position: 200px -30px;
+}
+
+.hint_logo {
+    background: url(/images/button4_06.png);
+    position: absolute;
+    left: 424px;
+    top: 80px;
+    width: 124px;
+    height: 104px;
+}
+
+.hint1_logo {
+    background-position: 0;
+}
+
+.hint2_logo {
+    background-position: -122px;
+}
+
+.submitted_logo {
+    background: url(/images/button5_08.png);
+    position: absolute;
+    top: 200px;
+    left: 174px;
+    width: 638px;
+    height: 230px;
+}
