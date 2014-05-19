@@ -4,7 +4,7 @@
     () ->
       restrict: 'E'
       replace: true
-      templateUrl: 'js/partials/irNavbar.html'
+      templateUrl: 'partials/irNavbar'
   ]
 
   appModule.controller 'irNavCtrl', [

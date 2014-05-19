@@ -8,7 +8,7 @@ html(lang="en")
     link(rel='stylesheet', href='/css/app.css')
     link(rel='stylesheet', href='/css/irally.css')
     link(rel='stylesheet', href='/bower_components/angular/angular-csp.css')
-  body(ng-controller='AppCtrl', ng-init="cobrandModel.displayName = '" + displayName + "'")
+  body(ng-controller='AppCtrl', ng-init="cobrandModel.displayName = '" + displayName + "'; cobrandModel.curie = '" + curie + "';")
     ir-nav-bar
     .container
       block body
@@ -27,4 +27,6 @@ html(lang="en")
     script(type='text/javascript', src='bower_components/angular-strap/dist/modules/navbar.js')
     script(type='text/javascript', src='bower_components/angular-strap/dist/modules/tab.js')
     script(type='text/javascript', src='js/navbar.js')
+    script(type='text/javascript', src='js/lobby.js')
+    script(type='text/javascript', src='js/authent.js')
     script(type='text/javascript', src='js/irally.js')

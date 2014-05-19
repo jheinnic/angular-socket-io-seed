@@ -1,0 +1,24 @@
+<div class="navbar navbar-inverse navbar-top-fixed navbar-default" role="banner" bs-navbar>
+  <div class="container-fluid">
+    <div class="navbar-header navbar-left">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#irally-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">iRally</a>
+    </div>
+    <div id="irally-navbar-collapse" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right" role="navigation" ng-if="sessionModel.authToken == null">
+        <li data-match-route="/login/educator$">
+          <a href="/login/educator">Educator Login</a>
+        </li>
+        <li data-match-route="/login/player$">
+          <a href="/login/player">Player Login</a>
+        </li>
+      </ul>
+      <button class="nav navbar-nav navbar-right" ng-click="logout()" ng-if="sessionModel.authToken != null">Logout</button>
+    </div>
+  </div>
+</div>

@@ -33,7 +33,7 @@ module.exports = function(globalSocket, cobrandConfig) {
   /**
    * Socket.io Communication
    */
-  require('./sockets')(globalSocket, cobrandConfig);
+  require('./sockets/lobby')(globalSocket, cobrandConfig);
 
   // server.listen(app.get('port'), function () {
   //   console.log('Express server cobrand ' + cobrandConfig.portalUriRoot + ' listening on port ' + app.get('port'));

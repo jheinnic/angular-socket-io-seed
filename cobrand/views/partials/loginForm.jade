@@ -1,19 +1,18 @@
-form(name="loginForm" id="loginForm" action="")
-  div(class="row")
-    div(class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4 pull-center")
+.row: .col-xs-6.col-xs-offset-3.col-md-4.col-md-offset-4
+  .well
+    form(name="loginForm" action="")#loginForm.form-horizontal
       fieldset
         legend {{configModel.headerText}}
-      div(class="control-group", ng-class="{error: loginForm.errors.email}")
+      .control-group.form-group(ng-class="{has-error: loginForm.$error.email, has-feedback: loginForm.errors.email}")
         label Username
-        input(name="email", type="email", ng-model="loginModel.email", placeholder="Email Address", style='width: 100%', required)
-        span(class="help-block error", ng-show="loginForm.errors.email") Bad username help message
-      div(class="control-group", ng-class="{error: loginForm.errors.pasword}")
+        input(name="email", type="email", ng-model="loginModel.email", placeholder="Email Address", required).form-control
+        span(class="help-block error", ng-show="loginForm.$error.email") Bad username help message
+      .control-group.form-group(ng-class="{has-error: loginForm.$error.password, has-feedback: loginForm.errors.password}")
         label Password
-        input(name="password", type="password", ng-model="loginModel.password", placeholder="Password", style='width: 100%', required)
-        span(class="help-block error", ng-show="loginForm.errors.password") Bad password help message
-      br
-      button(name="signin", id="signin", class="btn btn-success btn-small pull-right", ng-disabled="loginForm.$invalid", ng-click="doLogin()") Log In
-  div(class="row")
-    div(class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4")
-      a(class="pull-left" ng-show="configModel.hasRegistration", href="/newUser") Sign up!
-      a(class="pull-right", href="/forgotPassword") Forgot password?
+        input(name="password", type="password", ng-model="loginModel.password", placeholder="Password", required).form-control
+        span(class="help-block error", ng-show="loginForm.$error.password") Bad password help message
+    button(name="signin", id="signin", ng-disabled="loginForm.$invalid", ng-click="doLogin()").btn.btn-success.btn-small.pull-right Log In
+    br
+.row: .col-xs-6.col-xs-offset-3.col-md-4.col-md-offset-4
+  a.pull-left(ng-show="configModel.hasRegistration", href="/newUser") Sign up!
+  a.pull-right(href="/forgotPassword") Forgot password?

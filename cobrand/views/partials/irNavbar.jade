@@ -1,0 +1,16 @@
+.navbar.navbar-inverse.navbar-top-fixed.navbar-default(role="banner", bs-navbar)
+  .container-fluid
+    .navbar-header.navbar-left
+      button.navbar-toggle(data-toggle="collapse", data-target="#irally-navbar-collapse")
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href="/") iRally
+    #irally-navbar-collapse.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right(role="navigation", ng-if="sessionModel.authToken == null")
+        li(data-match-route="/login/educator$")
+          a(href="/login/educator") Educator Login
+        li(data-match-route="/login/player$")
+          a(href="/login/player") Player Login
+      button.nav.navbar-nav.navbar-right(ng-click="logout()", ng-if="sessionModel.authToken != null") Logout
