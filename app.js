@@ -21,7 +21,7 @@ require('./app/config')(app, io);
 
 // Socket.io Communication
 // -- Nobody will connect to a socket of the root pseudo server, but lets exercise this anyhow.
-require('./app/sockets')(io);
+// require('./app/sockets')(io);
 
 /**
  * Start Server

@@ -2,16 +2,13 @@ div
   .row
     .col-xs-offset-1.col-xs-6
       h3 Messages
-      .overflowable
-        p(ng-repeat='message in messageModels') : 
+      .div(ng-model='messageModel.activeTabIndex', bs-tabs='messageModel.tabDefinitions')
     .col-xs-4
       h3 Users
       .overflowable: .list-group
-        a.list-group-item(ng-repeat='user in userModels', ng-class="getDecorationClass(user)", ng-mouseenter="user.hasMouse = true", ng-mouseleave="user.hasMouse=false", ng-click="selectUser(user)") {{user.displayName}} 
-          span.glyphicon.glyphicon-flag.pull-right(ng-if="user.hasMyTeam(sessionModel.teamCurie)")
-          span.glyphicon.glyphicon-circle.pull-right(ng-if="user.hasOtherTeam(sessionModel.teamCurie)")
-          span.glyphicon.glyphicon-user.pull-right(ng-if="user.isFreeAgent()")
-          span.glyphicon.glyphicon-book.pull-right(ng-if="user.isTeacher")
+        a.list-group-item(ng-repeat='user in userModels', ng-class="getMouseOverClass(user)", ng-mouseenter="user.hasMouse = true", ng-mouseleave="user.hasMouse=false", ng-click="selectUser(user)") {{user.displayName}} 
+          span.glyphicon.pull-right(ng-class="getGlyphIconClass(user)")
+      .button.btn.btn-primary(type="button", ng-disabled="controlStateModel.selected == null", ng-click="allocateMessageTab(controlStateModel.selected.curie, conrolStateModel.selected.displayName)")
   br
   form.form-horizontal
     .form-group
